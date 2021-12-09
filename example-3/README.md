@@ -15,3 +15,16 @@ https://medium.com/nuances-of-programming/%D0%BA%D0%B0%D0%BA-%D1%81%D0%BE%D0%B7%
 3) Сборка проекта
 
     npm run build
+
+4) Запуск сервера
+
+    npm run start
+
+----------------------------------------------------------
+Альтернативный сервер
+
+    npm install node-static
+
+Запуск сервера
+
+    dist\server.bat
