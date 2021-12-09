@@ -1,4 +1,4 @@
-# Example №2 (Webpack + Phaser)
+# Example №2 Webpack + Phaser (JavaScript)
 
 Создайте файл package.json
     npm init -y
