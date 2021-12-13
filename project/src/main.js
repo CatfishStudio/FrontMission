@@ -1,13 +1,18 @@
 //import "./lib/phaser.min.js";
 import Demo from "./scenes/Demo";
-import Boot from "./scenes/Boot"
+import Preloader from "./scenes/Preloader"
 
 window.addEventListener('load', function () {
 
 	var config = {
+        width: 860,
+        height: 730,
         type: Phaser.AUTO,
-        width: 800,
-        height: 600,
+        backgroundColor: "#000000",
+        scale: {
+			mode: Phaser.Scale.FIT,
+			autoCenter: Phaser.Scale.CENTER_BOTH
+		},
         physics: {
             default: 'arcade',
             arcade: {
@@ -19,5 +24,5 @@ window.addEventListener('load', function () {
     var game = new Phaser.Game(config);
 	
 	game.scene.add("Demo", Demo);
-	game.scene.add("Boot", Boot, true);
+	game.scene.add("Preloader", Preloader, true);
 });

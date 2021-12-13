@@ -16,17 +16,7 @@
   \*********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scenes_Demo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scenes/Demo */ \"./src/scenes/Demo.js\");\n/* harmony import */ var _scenes_Boot__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scenes/Boot */ \"./src/scenes/Boot.js\");\n//import \"./lib/phaser.min.js\";\r\n\r\n\r\n\r\nwindow.addEventListener('load', function () {\r\n\r\n\tvar config = {\r\n        type: Phaser.AUTO,\r\n        width: 800,\r\n        height: 600,\r\n        physics: {\r\n            default: 'arcade',\r\n            arcade: {\r\n                gravity: { y: 200 }\r\n            }\r\n        },\r\n    };\r\n\r\n    var game = new Phaser.Game(config);\r\n\t\r\n\tgame.scene.add(\"Demo\", _scenes_Demo__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\r\n\tgame.scene.add(\"Boot\", _scenes_Boot__WEBPACK_IMPORTED_MODULE_1__[\"default\"], true);\r\n});\n\n//# sourceURL=webpack://example-2/./src/main.js?");
-
-/***/ }),
-
-/***/ "./src/scenes/Boot.js":
-/*!****************************!*\
-  !*** ./src/scenes/Boot.js ***!
-  \****************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Boot)\n/* harmony export */ });\nclass Boot extends Phaser.Scene {\r\n    \r\n    constructor() {\r\n\t\tsuper(\"Boot\");\r\n\t}\r\n\r\n\tpreload() {\r\n\t\t\r\n\t\tthis.load.image('sky', 'assets/space3.png');\r\n        this.load.image('logo', 'assets/phaser3-logo.png');\r\n        this.load.image('red', 'assets/red.png');\r\n\r\n        this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start(\"Demo\"));\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Boot.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scenes_Demo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scenes/Demo */ \"./src/scenes/Demo.js\");\n/* harmony import */ var _scenes_Preloader__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./scenes/Preloader */ \"./src/scenes/Preloader.js\");\n//import \"./lib/phaser.min.js\";\r\n\r\n\r\n\r\nwindow.addEventListener('load', function () {\r\n\r\n\tvar config = {\r\n        width: 860,\r\n        height: 730,\r\n        type: Phaser.AUTO,\r\n        backgroundColor: \"#000000\",\r\n        scale: {\r\n\t\t\tmode: Phaser.Scale.FIT,\r\n\t\t\tautoCenter: Phaser.Scale.CENTER_BOTH\r\n\t\t},\r\n        physics: {\r\n            default: 'arcade',\r\n            arcade: {\r\n                gravity: { y: 200 }\r\n            }\r\n        },\r\n    };\r\n\r\n    var game = new Phaser.Game(config);\r\n\t\r\n\tgame.scene.add(\"Demo\", _scenes_Demo__WEBPACK_IMPORTED_MODULE_0__[\"default\"]);\r\n\tgame.scene.add(\"Preloader\", _scenes_Preloader__WEBPACK_IMPORTED_MODULE_1__[\"default\"], true);\r\n});\n\n//# sourceURL=webpack://example-2/./src/main.js?");
 
 /***/ }),
 
@@ -36,7 +26,17 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Demo)\n/* harmony export */ });\nclass Demo extends Phaser.Scene {\r\n    \r\n\tconstructor() {\r\n\t\tsuper(\"Demo\");\r\n\t}\r\n\r\n\tcreate() {\r\n\t\tthis.add.image(400, 300, 'sky');\r\n\r\n        var particles = this.add.particles('red');\r\n\r\n        var emitter = particles.createEmitter({\r\n            speed: 100,\r\n            scale: { start: 1, end: 0 },\r\n            blendMode: 'ADD'\r\n        });\r\n\r\n        var logo = this.physics.add.image(400, 100, 'logo');\r\n\r\n        logo.setVelocity(100, 200);\r\n        logo.setBounce(1, 1);\r\n        logo.setCollideWorldBounds(true);\r\n\r\n        emitter.startFollow(logo);\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Demo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Demo)\n/* harmony export */ });\nclass Demo extends Phaser.Scene {\r\n    \r\n\tconstructor() {\r\n\t\tsuper(\"Demo\");\r\n\t}\r\n\r\n\tcreate() {\r\n\t\t\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Demo.js?");
+
+/***/ }),
+
+/***/ "./src/scenes/Preloader.js":
+/*!*********************************!*\
+  !*** ./src/scenes/Preloader.js ***!
+  \*********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Preloader)\n/* harmony export */ });\nclass Preloader extends Phaser.Scene {\r\n    \r\n    constructor() {\r\n\t\tsuper(\"Preloader\");\r\n\t}\r\n\r\n\tpreload() {\r\n\t\t\r\n\t\tthis.load.image('image_preloader', 'assets/preloader.png');\r\n\r\n        //this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start(\"Demo\"));\r\n\t}\r\n\r\n\tcreate() {\r\n\t\tthis.add.image(430, 365, 'image_preloader');\r\n\r\n        \r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Preloader.js?");
 
 /***/ })
 
