@@ -5,15 +5,11 @@ export default class Preloader extends Phaser.Scene {
 	}
 
 	preload() {
-		
-		this.load.image('image_preloader', 'assets/preloader.png');
-
-        //this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Demo"));
+		this.load.pack("pack", "assets/units.json");
+        this.load.on(Phaser.Loader.Events.COMPLETE, () => this.scene.start("Demo"));
 	}
 
 	create() {
-		this.add.image(430, 365, 'image_preloader');
 
-        
 	}
 }

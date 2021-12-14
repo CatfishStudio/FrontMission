@@ -1,4 +1,5 @@
 //import "./lib/phaser.min.js";
+import Boot from "./scenes/Boot";
 import Demo from "./scenes/Demo";
 import Preloader from "./scenes/Preloader"
 
@@ -24,5 +25,6 @@ window.addEventListener('load', function () {
     var game = new Phaser.Game(config);
 	
 	game.scene.add("Demo", Demo);
-	game.scene.add("Preloader", Preloader, true);
+	game.scene.add("Preloader", Preloader);
+    game.scene.add("Boot", Boot, true);
 });

@@ -1,0 +1,51 @@
+{
+    "section1": {
+        "files": [
+            {
+                "url": "assets/units/38195.png",
+                "key": "38195",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38197.png",
+                "key": "38197",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38198.png",
+                "key": "38198",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38202.png",
+                "key": "38202",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38204.png",
+                "key": "38204",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38228.png",
+                "key": "38228",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38231.png",
+                "key": "38231",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38232.png",
+                "key": "38232",
+                "type": "image"
+            },
+            {
+                "url": "assets/units/38233.png",
+                "key": "38233",
+                "type": "image"
+            }
+        ]
+    }
+}
