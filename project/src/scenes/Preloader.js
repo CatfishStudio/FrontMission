@@ -1,3 +1,5 @@
+import Images from "../data/Images";
+
 export default class Preloader extends Phaser.Scene {
     static name = 'Preloader';
 
@@ -6,7 +8,8 @@ export default class Preloader extends Phaser.Scene {
 	}
 
 	preload() {
-		
+		this.add.image(430, 365, 'image_preloader');
+
 		let progress = this.add.graphics();
 
 		this.load.on(Phaser.Loader.Events.PROGRESS, function(value){
@@ -20,10 +23,12 @@ export default class Preloader extends Phaser.Scene {
 			this.scene.start("Demo");
 		}, this);
 
-		this.load.pack("pack", "assets/units.json");
+		Images.preloadList.forEach(element => {
+			this.load.image(element, element);
+		});
 	}
 
 	create() {
-		this.add.image(430, 365, 'image_preloader');
+		
 	}
 }

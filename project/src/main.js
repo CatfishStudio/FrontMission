@@ -1,6 +1,6 @@
 //import "./lib/phaser.min.js";
 import Demo from "./scenes/Demo";
-import Preloader from "./scenes/Preloader"
+import Preloader from "./scenes/Preloader";
 
 window.addEventListener('load', function () {
 

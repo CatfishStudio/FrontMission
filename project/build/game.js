@@ -10,6 +10,16 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/data/Images.js":
+/*!****************************!*\
+  !*** ./src/data/Images.js ***!
+  \****************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Images)\n/* harmony export */ });\nclass Images {\r\n    static img38195 = 'assets/units/38195.png';\r\n    static img38197 = 'assets/units/38197.png';\r\n    static img38198 = 'assets/units/38198.png';\r\n    static img38202 = 'assets/units/38202.png';\r\n    static img38204 = 'assets/units/38204.png';\r\n    static img38228 = 'assets/units/38228.png';\r\n    static img38231 = 'assets/units/38231.png';\r\n    static img38232 = 'assets/units/38232.png';\r\n    static img38233 = 'assets/units/38233.png';\r\n\r\n    static preloadList = [\r\n        Images.img38195,\r\n        Images.img38197,\r\n        Images.img38198,\r\n        Images.img38202,\r\n        Images.img38204,\r\n        Images.img38228,\r\n        Images.img38231,\r\n        Images.img38232,\r\n        Images.img38233\r\n    ];\r\n}\n\n//# sourceURL=webpack://example-2/./src/data/Images.js?");
+
+/***/ }),
+
 /***/ "./src/main.js":
 /*!*********************!*\
   !*** ./src/main.js ***!
@@ -26,7 +36,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _sce
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Demo)\n/* harmony export */ });\nclass Demo extends Phaser.Scene {\r\n    static name = 'Demo';\r\n\r\n\tconstructor() {\r\n\t\tsuper(Demo.name);\r\n\t}\r\n\r\n\tcreate() {\r\n\t\tthis.add.image(400, 300, '38195');\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Demo.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Demo)\n/* harmony export */ });\n/* harmony import */ var _data_Images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/Images */ \"./src/data/Images.js\");\n\r\n\r\nclass Demo extends Phaser.Scene {\r\n    static name = 'Demo';\r\n\r\n\tconstructor() {\r\n\t\tsuper(Demo.name);\r\n\t}\r\n\r\n\tcreate() {\r\n\t\tthis.add.image(400, 300, _data_Images__WEBPACK_IMPORTED_MODULE_0__[\"default\"].img38233);\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Demo.js?");
 
 /***/ }),
 
@@ -36,7 +46,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
   \*********************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Preloader)\n/* harmony export */ });\nclass Preloader extends Phaser.Scene {\r\n    static name = 'Preloader';\r\n\r\n\tconstructor() {\r\n\t\tsuper(Preloader.name);\r\n\t}\r\n\r\n\tpreload() {\r\n\t\t\r\n\t\tlet progress = this.add.graphics();\r\n\r\n\t\tthis.load.on(Phaser.Loader.Events.PROGRESS, function(value){\r\n\t\t\tprogress.clear();\r\n        \tprogress.fillStyle(0xffffff, 1);\r\n        \tprogress.fillRect(0, 270, 800 * value, 60);\r\n\t\t});\r\n\r\n\t\tthis.load.on(Phaser.Loader.Events.COMPLETE, function () {\r\n\t\t\tprogress.destroy();\r\n\t\t\tthis.scene.start(\"Demo\");\r\n\t\t}, this);\r\n\r\n\t\tthis.load.pack(\"pack\", \"assets/units.json\");\r\n\t}\r\n\r\n\tcreate() {\r\n\t\tthis.add.image(430, 365, 'image_preloader');\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Preloader.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (/* binding */ Preloader)\n/* harmony export */ });\n/* harmony import */ var _data_Images__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../data/Images */ \"./src/data/Images.js\");\n\r\n\r\nclass Preloader extends Phaser.Scene {\r\n    static name = 'Preloader';\r\n\r\n\tconstructor() {\r\n\t\tsuper(Preloader.name);\r\n\t}\r\n\r\n\tpreload() {\r\n\t\tthis.add.image(430, 365, 'image_preloader');\r\n\r\n\t\tlet progress = this.add.graphics();\r\n\r\n\t\tthis.load.on(Phaser.Loader.Events.PROGRESS, function(value){\r\n\t\t\tprogress.clear();\r\n        \tprogress.fillStyle(0xffffff, 1);\r\n        \tprogress.fillRect(0, 270, 800 * value, 60);\r\n\t\t});\r\n\r\n\t\tthis.load.on(Phaser.Loader.Events.COMPLETE, function () {\r\n\t\t\tprogress.destroy();\r\n\t\t\tthis.scene.start(\"Demo\");\r\n\t\t}, this);\r\n\r\n\t\t_data_Images__WEBPACK_IMPORTED_MODULE_0__[\"default\"].preloadList.forEach(element => {\r\n\t\t\tconsole.log(element);\r\n\t\t\tthis.load.image(element, element);\r\n\t\t});\r\n\t}\r\n\r\n\tcreate() {\r\n\t\t\r\n\t}\r\n}\n\n//# sourceURL=webpack://example-2/./src/scenes/Preloader.js?");
 
 /***/ })
 
