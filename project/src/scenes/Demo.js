@@ -1,7 +1,8 @@
 export default class Demo extends Phaser.Scene {
-    
+    static name = 'Demo';
+
 	constructor() {
-		super("Demo");
+		super(Demo.name);
 	}
 
 	create() {
