@@ -1,4 +1,8 @@
 export default class Images {
+    
+    static imgMenuLogo = 'assets/menu_logo.png';
+    static imgMenuBackground = 'assets/menu_background.png';
+    
     static img38195 = 'assets/units/38195.png';
     static img38197 = 'assets/units/38197.png';
     static img38198 = 'assets/units/38198.png';
@@ -9,7 +13,11 @@ export default class Images {
     static img38232 = 'assets/units/38232.png';
     static img38233 = 'assets/units/38233.png';
 
+    
+
     static preloadList = [
+        Images.imgMenuLogo,
+        Images.imgMenuBackground,
         Images.img38195,
         Images.img38197,
         Images.img38198,

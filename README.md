@@ -24,3 +24,14 @@ https://ru.inettools.net/image/pikselizatsiya-kartinki
 
 Мультяшные картинка из фото
 https://www.imgonline.com.ua/cartoon-picture.php
+
+
+-----------------------------------------
+GameObjectFactory
+https://newdocs.phaser.io/docs/3.55.2/Phaser.GameObjects.GameObjectFactory
+
+Scenes
+https://newdocs.phaser.io/docs/3.55.2/Phaser.Scenes
+
+SceneManager
+https://newdocs.phaser.io/docs/3.55.2/Phaser.Scenes.SceneManager

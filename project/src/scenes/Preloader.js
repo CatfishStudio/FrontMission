@@ -1,4 +1,5 @@
 import Images from "../data/Images";
+import Menu from "../scenes/Menu";
 
 export default class Preloader extends Phaser.Scene {
     static name = 'Preloader';
@@ -20,7 +21,7 @@ export default class Preloader extends Phaser.Scene {
 
 		this.load.on(Phaser.Loader.Events.COMPLETE, function () {
 			progress.destroy();
-			this.scene.start("Demo");
+			this.scene.start(Menu.name);
 		}, this);
 
 		Images.preloadList.forEach(element => {

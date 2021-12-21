@@ -1,5 +1,6 @@
 //import "./lib/phaser.min.js";
 import Demo from "./scenes/Demo";
+import Menu from './scenes/Menu';
 import Preloader from "./scenes/Preloader";
 
 window.addEventListener('load', function () {
@@ -9,6 +10,7 @@ window.addEventListener('load', function () {
         height: 730,
         type: Phaser.AUTO,
         backgroundColor: "#000000",
+        /*
         scale: {
 			mode: Phaser.Scale.FIT,
 			autoCenter: Phaser.Scale.CENTER_BOTH
@@ -19,11 +21,13 @@ window.addEventListener('load', function () {
                 gravity: { y: 200 }
             }
         },
+        */
     };
 
     const game = new Phaser.Game(config);
 	
-	game.scene.add(Demo.name, Demo);
+	//game.scene.add(Demo.name, Demo);
+    game.scene.add(Menu.name, Menu);
 	game.scene.add(Preloader.name, Preloader);
     game.scene.add(Boot.name, Boot, true);
 });
