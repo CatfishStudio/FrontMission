@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "Example №2 (Webpack + Phaser)",
   "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "npx webpack --config webpack.config.js"
